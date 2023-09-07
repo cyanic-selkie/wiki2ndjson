@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "dependencies": {
+    "dumpster-dip": "^0.1.4"
+  }
+}
