@@ -17,23 +17,23 @@ const opts = {
   disambiguation: false,
 
   parse: function (doc) {
-    page = {
+    let page = {
       title: doc.title(),
       pageID: parseInt(doc.pageID()),
       sections: [],
     };
     for (let section of doc.sections()) {
-      section_title = section.title();
-      section_depth = section.depth();
+      let section_title = section.title();
+      let section_depth = section.depth();
 
-      current_section = {
+      let current_section = {
         title: section_title,
         depth: section_depth,
         paragraphs: [],
       };
 
       for (let paragraph of section.paragraphs()) {
-        current_paragraph = [];
+        let current_paragraph = [];
         for (let sentence of paragraph.sentences()) {
           let sentence_json = sentence.json();
 
